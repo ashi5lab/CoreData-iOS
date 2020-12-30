@@ -80,7 +80,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let action = UIContextualAction
+        let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandler) in
+            
+            //which person to remove
+            let personToRemove = self.items![indexPath.row]
+            //remove the person
+            self.context.delete(personToRemove)
+            //save the data
+            do{
+                    try! self.context.save()
+            }
+            catch{
+                
+            }
+            
+            //refetch the data
+            self.fetchPeople()
+            
+            
+        }
+        
+        return UISwipeActionsConfiguration(actions: [action])
     }
 
     @IBAction func addtapped(_ sender: Any) {
