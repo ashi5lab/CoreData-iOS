@@ -37,7 +37,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     {
         //Fetch dat from coredata to display to tableView
         do{
-            self.items = try! context.fetch(Person.fetchRequest())
+            
+            let request = Person.fetchRequest() as NSFetchRequest<Person>
+            
+            //set filtering and sorting
+//            let pred = NSPredicate(format: "name CONTAINS %@","Ted")
+//            request.predicate = pred
+            
+            self.items = try! context.fetch(request)
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
