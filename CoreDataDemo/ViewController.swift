@@ -44,6 +44,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //            let pred = NSPredicate(format: "name CONTAINS %@","Ted")
 //            request.predicate = pred
             
+            //sort
+            
+            let sort = NSSortDescriptor(key: "name", ascending: true)
+            request.sortDescriptors = [sort]
+            
             self.items = try! context.fetch(request)
             
             DispatchQueue.main.async {
