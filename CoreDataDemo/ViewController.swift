@@ -23,9 +23,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        let pC = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
+                
         tableView.dataSource = self
         tableView.delegate = self
         
