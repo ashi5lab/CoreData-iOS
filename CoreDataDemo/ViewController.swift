@@ -33,6 +33,34 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    func relationshipDemo()
+    {
+        //create a Family
+        
+        let family = Family(context: context)
+        family.name = "Abc Family"
+        
+        //create a person
+        
+        let person = Person(context: context)
+        person.name = "Maggie"
+        //add to family
+        family.addToPeople(person)
+        //another way
+        //person.family = family
+        
+        //save the context
+        do{
+            try! context.save()
+        }
+        catch{
+            
+        }
+       
+        
+        
+    }
+    
     func fetchPeople()
     {
         //Fetch dat from coredata to display to tableView

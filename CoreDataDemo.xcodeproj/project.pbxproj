@@ -14,7 +14,10 @@
 		7202E8A7259CFE0300909910 /* CoreDataDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7202E8A5259CFE0300909910 /* CoreDataDemo.xcdatamodeld */; };
 		7202E8A9259CFE0500909910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7202E8A8259CFE0500909910 /* Assets.xcassets */; };
 		7202E8AC259CFE0500909910 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7202E8AA259CFE0500909910 /* LaunchScreen.storyboard */; };
-		7202E8B6259CFEDB00909910 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7202E8B4259CFEDB00909910 /* Person+CoreDataClass.swift */; };
+		7202E8C2259D125E00909910 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7202E8BE259D125E00909910 /* Person+CoreDataClass.swift */; };
+		7202E8C3259D125E00909910 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7202E8BF259D125E00909910 /* Person+CoreDataProperties.swift */; };
+		7202E8C4259D125E00909910 /* Family+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7202E8C0259D125E00909910 /* Family+CoreDataClass.swift */; };
+		7202E8C5259D125E00909910 /* Family+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7202E8C1259D125E00909910 /* Family+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +30,10 @@
 		7202E8A8259CFE0500909910 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7202E8AB259CFE0500909910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7202E8AD259CFE0500909910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7202E8B4259CFEDB00909910 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7202E8BE259D125E00909910 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7202E8BF259D125E00909910 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7202E8C0259D125E00909910 /* Family+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Family+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7202E8C1259D125E00909910 /* Family+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Family+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +82,10 @@
 		7202E8B9259CFEE700909910 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7202E8B4259CFEDB00909910 /* Person+CoreDataClass.swift */,
+				7202E8BE259D125E00909910 /* Person+CoreDataClass.swift */,
+				7202E8BF259D125E00909910 /* Person+CoreDataProperties.swift */,
+				7202E8C0259D125E00909910 /* Family+CoreDataClass.swift */,
+				7202E8C1259D125E00909910 /* Family+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,9 +162,12 @@
 			files = (
 				7202E8A1259CFE0300909910 /* ViewController.swift in Sources */,
 				7202E8A7259CFE0300909910 /* CoreDataDemo.xcdatamodeld in Sources */,
-				7202E8B6259CFEDB00909910 /* Person+CoreDataClass.swift in Sources */,
+				7202E8C4259D125E00909910 /* Family+CoreDataClass.swift in Sources */,
+				7202E8C3259D125E00909910 /* Person+CoreDataProperties.swift in Sources */,
+				7202E8C2259D125E00909910 /* Person+CoreDataClass.swift in Sources */,
 				7202E89D259CFE0300909910 /* AppDelegate.swift in Sources */,
 				7202E89F259CFE0300909910 /* SceneDelegate.swift in Sources */,
+				7202E8C5259D125E00909910 /* Family+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
