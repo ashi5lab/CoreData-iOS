@@ -76,6 +76,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         alert.addTextField()
         let textfield = alert.textFields![0]
         textfield.text = person.name
+        
+        let saveButton = UIAlertAction(title: "Save", style: .default){
+            (action) in
+            
+            //get the textfield for person object
+            let textField = alert.textFields![0]
+            
+            //edit name
+            person.name = textfield.text
+            
+            //save
+            do{
+                    try! self.context.save()
+            }
+            catch{
+                
+            }
+            
+            //refetch the data
+            self.fetchPeople()
+            
+
+        }
+        //Add alert button
+        alert.addAction(saveButton)
+        //present
+        self.present(alert, animated: true, completion: nil)
+        
+            
+        
+        
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -103,6 +134,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return UISwipeActionsConfiguration(actions: [action])
     }
 
+    
     @IBAction func addtapped(_ sender: Any) {
         let alert = UIAlertController(title: "Add person", message: "Add Name", preferredStyle: .alert)
         alert.addTextField()
