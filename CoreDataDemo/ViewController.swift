@@ -38,6 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //create a Family
         
         let family = Family(context: context)
+        print(family)
         family.name = "Abc Family"
         
         //create a person
